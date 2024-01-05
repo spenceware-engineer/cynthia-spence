@@ -1,34 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './Home'
-import Resume from './components/Resume'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
+import { routes } from './shared/routes'
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: '/resume',
-    element: <Resume />
-  },
-  {
-    path: '/links',
-    element: <h1>LINKS</h1>
-  },
-  {
-    path: '/contact',
-    element: <h1>CONTACT</h1>
-  },
-  {
-    path: '/about',
-    element: <h1>ABOUT</h1>
-  }
-])
+const router = createBrowserRouter(routes)
 
 ReactDOM
   .createRoot(document.getElementById('root'))
