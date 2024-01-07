@@ -18,33 +18,9 @@ const Contact = () => {
   const [ email, setEmail ] = useState('')
   const [ message, setMessage ] = useState('')
 
-  // const onSend = () => {
-  //   const transporter = nm.createTransport(
-  //     {
-  //       service: 'gmail',
-  //       auth: {
-  //         user: 'cynthia.spence.dev@gmail.com',
-  //         pass: process.env.GMAIL_PASS
-  //       }
-  //     }
-  //   )
-
-  //   transporter.sendMail(
-  //     {
-  //       from: 'cynthia.spence.dev@gmail.com',
-  //       to: 'cynthia.spence.dev+contact@gmail.com',
-  //       subject: `${name} ${company ? `from ${company} ` : ''} is contacting you from your portfolio site.`,
-  //       text: `${message}\nemail: ${email}`
-  //     },
-  //     (err, info) => {
-  //       if (err) {
-  //         console.log(err)
-  //       } else {
-  //         console.log(info)
-  //       }
-  //     }
-  //   )
-  // }
+  const onSend = () => {
+    console.log(name, company, email, message)
+  }
 
   return (
     <Box>
@@ -90,6 +66,7 @@ const Contact = () => {
           <CustomButton
             style={styles.contactSendButton}
             {...buttons.sendButton}
+            handleClick={onSend}
           />
         </Paper>
         <Typography variant="h3" align="center" style={styles.bioSignOff}>
