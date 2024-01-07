@@ -181,12 +181,42 @@ export default {
     backgroundColor: colors.prussianBlue,
     color: colors.eggshell,
   },
-  certPageTitle: {
+  pageTitle: {
     padding: '15px',
+    color: colors.eggshell,
+    fontWeight: 600,
   },
   headerHomeText: {
     textDecoration: 'none',
     color: colors.eggshell,
     paddingLeft: '5px',
   },
+  contactPage: {
+    backgroundColor: colors.prussianBlue,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'stretch',
+  },
+  contactContainer: {
+    width: '50%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    margin: '15px',
+    backgroundColor: colors.wine,
+    padding: '20px',
+    borderRadius: '20px',
+    boxShadow: `0px 0px 12px ${colors.oldRose}`,
+  },
+  contactFormField: {
+    margin: '10px',
+    backgroundColor: colors.eggshell,
+  },
+  contactSendButton: {
+    margin: '10px',
+    boxShadow: `0px 1px 8px ${colors.oldRose}`,
+    backgroundColor: colors.prussianBlue,
+    borderRadius: '9999px',
+  }
 }

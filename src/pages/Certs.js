@@ -13,7 +13,7 @@ const Certs = () => {
   return (
     <Box style={styles.certPageContainer}>
       <SharedHeader />
-      <Typography variant="h2" align="center" style={styles.certPageTitle}>
+      <Typography variant="h2" align="center" style={styles.pageTitle}>
         Certifications and Awards
       </Typography>
       <Grid container>
