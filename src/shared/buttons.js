@@ -38,7 +38,7 @@ export const buttons = {
   resume: {
     icon: <FontAwesomeIcon icon={faDownload} />,
     handleClick: downloadResume,
-    label: "Download Resume"
+    label: "Resume"
   },
   sendButton: {
     icon: <FontAwesomeIcon icon={faPaperPlane} />,

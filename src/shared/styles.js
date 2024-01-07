@@ -9,10 +9,10 @@ export default {
   buttons: {
     backgroundColor: colors.prussianBlue,
     borderRadius: '9999px',
-    boxShadow: `0px 3px 8px 4px ${colors.oldRose}`,
+    boxShadow: `0px 0px 4px 2px ${colors.oldRose}`,
     color: colors.eggshell,
     padding: 10,
-    width: 220,
+    width: '100%',
   },
   buttonsInGroup: {
     backgroundColor: colors.prussianBlue,
@@ -27,7 +27,15 @@ export default {
   centerInContainer: {
     alignItems: 'center',
     display: 'flex',
+    justifyContent: 'flex-start',
+    width: '80%'
+  },
+  mqCenterInContainer: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
     justifyContent: 'center',
+    padding: '30px',
   },
   certArea: {
     backgroundColor: colors.prussianBlue,
@@ -62,9 +70,18 @@ export default {
     color: colors.eggshell,
     display: 'flex',
     fontWeight: 600,
-    height: 500,
     justifyContent: 'center',
     width: '100%',
+  },
+  mqHeader: {
+    alignItems: 'center',
+    backgroundColor: colors.wine,
+    color: colors.eggshell,
+    display: 'flex',
+    fontWeight: 600,
+    justifyContent: 'center',
+    width: '100%',
+    paddingBottom: '30px',
   },
   institutionArea: {
     alignItems: 'center',
@@ -78,6 +95,7 @@ export default {
     borderRadius: '9999px',
     boxShadow: `0px 0px 8px 4px ${colors.oldRose}`,
     height: 400,
+    margin: '30px',
   },
   myPictureContainer: {
     alignItems: 'center',
