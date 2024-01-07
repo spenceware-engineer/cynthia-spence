@@ -11,15 +11,34 @@ import CustomButton from '../components/CustomButton'
 import { InlineWidget } from 'react-calendly'
 import styles from '../shared/styles'
 import { buttons } from '../shared/buttons'
+import axios from 'axios'
 
 const Contact = () => {
   const [ name, setName ] = useState('')
   const [ company, setCompany ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ message, setMessage ] = useState('')
+  const [ waiting, setWaiting ] = useState(false)
 
-  const onSend = () => {
-    console.log(name, company, email, message)
+  const onSend = async () => {
+    axios({
+      method: 'post',
+      url: `${process.env.BASE_URL}/send-email`,
+      data: {
+        name,
+        company,
+        email,
+        message,
+      },
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    }).then(() => {
+      setName('')
+      setCompany('')
+      setEmail('')
+      setMessage('')
+    })
   }
 
   return (
@@ -39,6 +58,7 @@ const Contact = () => {
             id="Name"
             label="Name"
             variant="outlined"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <TextField
@@ -46,6 +66,7 @@ const Contact = () => {
             id="Company"
             label="Company"
             variant="outlined"
+            value={company}
             onChange={(e) => setCompany(e.target.value)}
           />
           <TextField
@@ -53,6 +74,7 @@ const Contact = () => {
             id="Email"
             label="Email"
             variant="outlined"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextareaAutosize
@@ -60,6 +82,7 @@ const Contact = () => {
             id="Message"
             placeholder="Message"
             variant="outlined"
+            value={message}
             onChange={(e) => setMessage(e.target.value)}
             minRows={5}
           />
