@@ -1,25 +1,18 @@
-import Home from '../Home'
-import Resume from '../components/Resume'
+import Home from '../pages/Home'
+import Contact from '../pages/Contact'
+import Certs from '../pages/Certs'
 
 export const routes = [
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: '/resume',
-    element: <Resume />
-  },
-  {
-    path: '/links',
-    element: <h1>LINKS</h1>
-  },
-  {
     path: '/contact',
-    element: <h1>CONTACT</h1>
+    element: <Contact />
   },
   {
-    path: '/about',
-    element: <h1>ABOUT</h1>
+    path: '/certifications',
+    element: <Certs />
   }
 ]
