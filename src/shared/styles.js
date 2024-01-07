@@ -40,6 +40,9 @@ export default {
   certArea: {
     backgroundColor: colors.prussianBlue,
     padding: 10,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   certAvatar: {
     height: 56,
