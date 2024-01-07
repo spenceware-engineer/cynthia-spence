@@ -1,4 +1,4 @@
-import { faAward, faDownload, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faAward, faDownload, faEnvelope, faPaperPlane, faBars, faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -42,6 +42,15 @@ export const buttons = {
   },
   sendButton: {
     icon: <FontAwesomeIcon icon={faPaperPlane} />,
-    label: "Send"
+    label: "Send",
+  },
+  menuButton: {
+    icon: <FontAwesomeIcon icon={faBars} />,
+    label: "Menu",
+  },
+  home: {
+    icon: <FontAwesomeIcon icon={faHouse} />,
+    label: "Home",
+    link: "/",
   }
 }
