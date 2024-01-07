@@ -71,7 +71,7 @@ export default {
   },
   informaticsCert: {
     avatar: 'logos/awc-400x400.jpeg',
-    description: '3.5 GPA',
+    description: 'Graduated with a 3.5 GPA.',
     institution: 'Arizona Western College',
     src: 'certs/informatics-cert.jpg',
     title: 'Certificate of Informatics Software Development and Information Management',

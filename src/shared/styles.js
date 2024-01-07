@@ -9,7 +9,7 @@ export default {
   buttons: {
     backgroundColor: colors.prussianBlue,
     borderRadius: '9999px',
-    boxShadow: '0px 3px 8px 4px #CC7E85',
+    boxShadow: `0px 3px 8px 4px ${colors.oldRose}`,
     color: colors.eggshell,
     padding: 10,
     width: 220,
@@ -48,6 +48,10 @@ export default {
   },
   certTitleArea: {
     backgroundColor: colors.wine,
+    height: 100,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   expandIcon: {
     color: colors.eggshell,
@@ -72,7 +76,7 @@ export default {
   },
   myPicture: {
     borderRadius: '9999px',
-    boxShadow: '0px 0px 8px 4px #CC7E85',
+    boxShadow: `0px 0px 8px 4px ${colors.oldRose}`,
     height: 400,
   },
   myPictureContainer: {
@@ -90,7 +94,7 @@ export default {
   smallPicture: {
     backgroundColor: colors.prussianBlue,
     borderRadius: '9999px',
-    boxShadow: '0px 1px 4px 2px #CC7E85',
+    boxShadow: `0px 1px 4px 2px ${colors.oldRose}`,
     height: 65,
     margin: 8,
   },
@@ -170,5 +174,19 @@ export default {
   bioSignOff: {
     color: colors.eggshell,
     padding: '15px',
-  }
+  },
+  certPageContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: colors.prussianBlue,
+    color: colors.eggshell,
+  },
+  certPageTitle: {
+    padding: '15px',
+  },
+  headerHomeText: {
+    textDecoration: 'none',
+    color: colors.eggshell,
+    paddingLeft: '5px',
+  },
 }

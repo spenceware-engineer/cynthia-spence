@@ -10,13 +10,11 @@ function HomeHeader() {
       <Grid container xs={styles.header}>
         <Grid item xs={4.5} style={styles.myPictureContainer}>
           <Container style={styles.centerInContainer}>
-            <a href="/">
-              <img
-                src="common_assets/this_is_me.jpeg"
-                alt="Photo of Cynthia Spence"
-                style={styles.myPicture}
-              />
-            </a>
+            <img
+              src="common_assets/this_is_me.jpeg"
+              alt="Photo of Cynthia Spence"
+              style={styles.myPicture}
+            />
           </Container>
         </Grid>
         <Grid item xs={7.5} style={styles.myInfoContainer}>

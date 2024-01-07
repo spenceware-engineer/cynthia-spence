@@ -1,4 +1,4 @@
-import { Box, ButtonGroup, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { buttons } from '../shared/buttons'
 import CustomButton from '../components/CustomButton'
 import styles from '../shared/styles'
@@ -10,7 +10,9 @@ const SharedHeader = () => {
         <a href="/" aria-label="Link to Home">
           <img style={styles.smallPicture} src="common_assets/this_is_me.jpeg" alt="Photo of Cynthia Spence" />
         </a>
-        <Typography variant="h3">Cynthia Spence</Typography>
+        <a href="/" aria-label="Link to Home" style={styles.headerHomeText}>
+          <Typography variant="h3">Cynthia Spence</Typography>
+        </a>
       </Box>
       <Box style={styles.buttonGroup}>
         <CustomButton style={styles.buttonsInGroup} {...buttons.linkedin} />

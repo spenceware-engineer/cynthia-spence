@@ -8,6 +8,7 @@ import {
   CardMedia,
   Collapse,
   IconButton,
+  Popover,
   Typography,
 } from '@mui/material'
 import clsx from 'clsx'
@@ -28,21 +29,27 @@ const ExpandMore = styled((props) => {
 }))
 
 const CertCard = (props) => {
-  const [ expanded, setExpanded ] = useState(false)
   const [ modalOpen, setModalOpen ] = useState(false)
+  const [ anchorEl, setAnchorEl ] = useState(null)
 
   const closeModal = (_, reason) => {
     if (reason === 'escapeKeyDown' || reason === 'backdropClick')
       setModalOpen(false)
   }
 
-  const handleExpand = () => {
-    setExpanded(!expanded)
-  }
-
   const openModal = () => {
     setModalOpen(true)
   }
+
+  const openPopover = (event) => {
+    setAnchorEl(event.target)
+  }
+
+  const closePopover = () => {
+    setAnchorEl(null)
+  }
+
+  const open = Boolean(anchorEl)
 
   return (
     <Box style={styles.certArea}>
@@ -50,21 +57,49 @@ const CertCard = (props) => {
         style={styles.certCard}
         onClick={openModal}
       >
-        <CardContent style={styles.institutionArea}>
+        <CardContent
+          aria-owns={open ? 'description-popover' : undefined}
+          aria-haspopup="true"
+          style={styles.institutionArea}
+        >
           <Avatar
             alt={props.institution}
             src={props.avatar}
             sx={styles.certAvatar}
+            onMouseEnter={openPopover}
+            onMouseLeave={closePopover}
           />
           <Typography
             sx={{ margin: '0 10px' }}
             variant="h6"
             component="div"
+            onMouseEnter={openPopover}
+            onMouseLeave={closePopover}
             gutterBottom
           >
             <em>{props.institution}</em> - {props.year}
           </Typography>
         </CardContent>
+        {props.description && (<Popover
+          id="description-popover"
+          open={open}
+          sx={{
+            pointerEvents: 'none',
+          }}
+          anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'center',
+          }}
+          transferOrigin={{
+            vertical: 'top',
+            horizontal: 'center',
+          }}
+          onClose={closePopover}
+          disableRestoreFocus
+        >
+          <Typography sx={{ p: 1 }}>{props.description}</Typography>
+        </Popover>)}
         <CardContent style={styles.certTitleArea}>
           <Typography
             variant="h5"
@@ -75,39 +110,12 @@ const CertCard = (props) => {
           </Typography>
         </CardContent>
         <CardMedia
-          height="194"
+          height="220"
           component={props.type}
           image={props.src}
           alt={props.title}
           style={styles.cardMedia}
         />
-        {props.description && (
-          <>
-            <CardActions>
-              <ExpandMore
-                expand={expanded}
-                onClick={handleExpand}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon
-                  style={styles.expandIcon}
-                />
-              </ExpandMore>
-            </CardActions>
-            <Collapse
-              in={expanded}
-              timeout="auto"
-              unmountOnExit
-            >
-              <CardContent>
-                <Typography paragraph>
-                  {props.description}
-                </Typography>
-              </CardContent>
-            </Collapse>
-          </>
-        )}
       </Card>
       <Modal
         style={styles.largeViewModal}
