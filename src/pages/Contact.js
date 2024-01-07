@@ -95,9 +95,9 @@ const Contact = () => {
         <Typography variant="h3" align="center" style={styles.bioSignOff}>
           You can also schedule a time to meet with me!
         </Typography>
-        <InlineWidget url="https://calendly.com/cynthia-spence-dev/30min" />
+        <InlineWidget styles={styles.calendly} url="https://calendly.com/cynthia-spence-dev/30-minute-meet-with-cynthia-spence" />
       </Box>
-    </Box>
+    </Box >
   )
 }
 

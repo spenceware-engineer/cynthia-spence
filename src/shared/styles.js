@@ -203,7 +203,7 @@ export default {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'stretch',
-    margin: '15px',
+    margin: '15px 15px 30px 15px',
     backgroundColor: colors.wine,
     padding: '20px',
     borderRadius: '20px',
@@ -218,5 +218,11 @@ export default {
     boxShadow: `0px 1px 8px ${colors.oldRose}`,
     backgroundColor: colors.prussianBlue,
     borderRadius: '9999px',
-  }
+  },
+  calendly: {
+    marginTop: '-30px',
+    marginBottom: '45px',
+    width: '80%',
+    height: '675px',
+  },
 }
