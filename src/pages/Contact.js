@@ -22,7 +22,7 @@ const Contact = () => {
   const onSend = async () => {
     axios({
       method: 'post',
-      url: `http://localhost:4000/send-email`,
+      url: `${process.env.REACT_APP_BASE_URL}/send-email`,
       data: {
         name,
         company,
