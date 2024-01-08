@@ -22,7 +22,7 @@ const Contact = () => {
   const onSend = async () => {
     axios({
       method: 'post',
-      url: `${process.env.REACT_APP_BASE_URL}/send-email`,
+      url: `http://localhost:4000/send-email`,
       data: {
         name,
         company,
@@ -32,11 +32,14 @@ const Contact = () => {
       headers: {
         "Content-Type": "application/json; charset=UTF-8"
       }
-    }).then(() => {
+    }).then((res) => {
+      console.log(res)
       setName('')
       setCompany('')
       setEmail('')
       setMessage('')
+    }).catch((err) => {
+      console.log(err)
     })
   }
 
