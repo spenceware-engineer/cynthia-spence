@@ -22,6 +22,7 @@ const CustomButton = (props) => {
       variant="contained"
       {...mapProps}
       {...menuProps}
+      type={props.type}
     >
       {props.label}
     </Button>

@@ -18,12 +18,11 @@ const Contact = () => {
   const [ company, setCompany ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ message, setMessage ] = useState('')
-  const [ waiting, setWaiting ] = useState(false)
 
   const onSend = async () => {
     axios({
       method: 'post',
-      url: `${process.env.BASE_URL}/send-email`,
+      url: `${process.env.REACT_APP_BASE_URL}/send-email`,
       data: {
         name,
         company,
@@ -31,7 +30,7 @@ const Contact = () => {
         message,
       },
       headers: {
-        "Content-type": "application/json; charset=UTF-8"
+        "Content-Type": "application/json; charset=UTF-8"
       }
     }).then(() => {
       setName('')
@@ -59,6 +58,8 @@ const Contact = () => {
             label="Name"
             variant="outlined"
             value={name}
+            type="text"
+            required
             onChange={(e) => setName(e.target.value)}
           />
           <TextField
@@ -67,6 +68,7 @@ const Contact = () => {
             label="Company"
             variant="outlined"
             value={company}
+            type="text"
             onChange={(e) => setCompany(e.target.value)}
           />
           <TextField
@@ -75,6 +77,8 @@ const Contact = () => {
             label="Email"
             variant="outlined"
             value={email}
+            type="email"
+            required
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextareaAutosize
@@ -83,10 +87,13 @@ const Contact = () => {
             placeholder="Message"
             variant="outlined"
             value={message}
+            type="text"
+            required
             onChange={(e) => setMessage(e.target.value)}
             minRows={5}
           />
           <CustomButton
+            type="submit"
             style={styles.contactSendButton}
             {...buttons.sendButton}
             handleClick={onSend}
