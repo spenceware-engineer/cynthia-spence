@@ -12,7 +12,7 @@ export const routes = [
     element: <Contact />
   },
   {
-    path: '/certifications',
+    path: '/awards',
     element: <Certs />
   }
 ]

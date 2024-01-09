@@ -11,9 +11,9 @@ const downloadResume = () => {
 
 export const buttons = {
   certs: {
-    link: "/certifications",
+    link: "/awards",
     icon: <FontAwesomeIcon icon={faAward} />,
-    label: "Certifications"
+    label: "Awards"
   },
   contact: {
     link: "/contact",
