@@ -199,5 +199,28 @@ export default {
     type: 'iframe',
     year: '2020',
   },
-
+  jsIntermediateHR: {
+    avatar: 'logos/hackerrank-800x800.png',
+    institution: 'HackerRank',
+    src: 'certs/javascript_intermediate_certificate.pdf',
+    title: 'JavaScript (Intermediate) Certificate',
+    type: 'iframe',
+    year: 2024,
+  },
+  sqlHackerRank: {
+    avatar: 'logos/hackerrank-800x800.png',
+    institution: 'HackerRank',
+    src: 'certs/sql_basic_certificate.pdf',
+    title: 'SQL (Basic) Certificate',
+    type: 'iframe',
+    year: 2024,
+  },
+  pythonHackerRank: {
+    avatar: 'logos/hackerrank-800x800.png',
+    institution: 'HackerRank',
+    src: 'certs/python_basic_certificate.pdf',
+    title: 'Python (Basic) Certificate',
+    type: 'iframe',
+    year: 2024,
+  }
 }
