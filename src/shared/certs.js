@@ -47,7 +47,7 @@ export default {
   hackerRankJava: {
     avatar: 'logos/hackerrank-800x800.png',
     institution: 'HackerRank',
-    src: 'https://www.hackerrank.com/certificates/iframe/c6f24474b302',
+    src: 'java_basic_certificate.pdf',
     title: 'Java (Basic) Certificate',
     type: 'iframe',
     year: '2020',
@@ -55,7 +55,7 @@ export default {
   hackerRankJS: {
     avatar: 'logos/hackerrank-800x800.png',
     institution: 'HackerRank',
-    src: 'https://www.hackerrank.com/certificates/iframe/b09d78fe952e',
+    src: 'javascript_basic_certificate.pdf',
     title: 'JavaScript (Basic) Certificate',
     type: 'iframe',
     year: '2020',
