@@ -46,11 +46,6 @@ const AboutSection = () => {
           </Typography>
         </Paper>
       </div>
-      <Typography variant="h6" align="center" style={styles.bioExplanation}>
-        This is who I am. Learning, in my opinion, is one of the most exciting things there is.
-        I've been told I won't get anywhere in life, and I continue to go further and reach bigger and better goals.
-        There is never a goal that is my final goal, there is always more to do, learn, acheive, and dream.
-      </Typography>
       <Typography variant="h4" align="center" style={styles.bioSignOff}>
         I also hope that these quotes inspire you today and going forward!
       </Typography>
