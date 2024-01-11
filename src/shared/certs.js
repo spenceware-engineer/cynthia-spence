@@ -222,5 +222,13 @@ export default {
     title: 'Python (Basic) Certificate',
     type: 'iframe',
     year: 2024,
+  },
+  problemSolvingBasicHR: {
+    avatar: 'logos/hackerrank-800x800.png',
+    institution: 'HackerRank',
+    src: 'certs/problem_solving_basic_certificate.pdf',
+    title: 'Problem Solving (Basic) Certificate',
+    type: 'iframe',
+    year: 2024,
   }
 }
