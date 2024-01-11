@@ -230,5 +230,13 @@ export default {
     title: 'Problem Solving (Basic) Certificate',
     type: 'iframe',
     year: 2024,
+  },
+  sololearnPythonDeveloper: {
+    avatar: 'logos/sololearn-1670x1670.png',
+    institution: 'Sololearn',
+    src: 'certs/sololearn-python-developer.pdf',
+    title: 'Python Developer',
+    type: 'iframe',
+    year: '2024',
   }
 }
