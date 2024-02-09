@@ -20,7 +20,7 @@ const Contact = () => {
   const [ message, setMessage ] = useState('')
 
   const onSend = async () => {
-    axios({
+    await axios({
       method: 'post',
       url: `${process.env.REACT_APP_BASE_URL}send-email`,
       data: {

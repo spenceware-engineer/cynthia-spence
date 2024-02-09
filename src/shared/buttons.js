@@ -31,7 +31,7 @@ export const buttons = {
     label: "GitLab"
   },
   linkedin: {
-    link: "https://www.linkedin.com/in/%F0%9F%8C%9E-cynthia-spence-68a226194",
+    link: "https://www.linkedin.com/in/cynthia-spence-68a226194",
     icon: <FontAwesomeIcon icon={faLinkedin} />,
     label: "LinkedIn"
   },
