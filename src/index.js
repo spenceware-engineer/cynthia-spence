@@ -1,21 +1,26 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
-import { createTheme } from '@mui/material'
 import { routes } from './shared/routes'
-import themeObject from './shared/themeObject'
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache
+} from '@apollo/client'
 
-const theme = createTheme(themeObject)
 const router = createBrowserRouter(routes)
+const client = new ApolloClient({
+  uri: process.env.REACT_APP_GRAPHQL_URL,
+  cache: new InMemoryCache()
+})
 
 ReactDOM
   .createRoot(document.getElementById('root'))
   .render(
-    <React.StrictMode>
+    <ApolloProvider client={client}>
       <RouterProvider router={router} />
-    </React.StrictMode>
+    </ApolloProvider>
   )

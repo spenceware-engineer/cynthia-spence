@@ -1,6 +1,42 @@
 import { colors } from './colors'
 
 export default {
+  bioBody: {
+    width: '75%',
+  },
+  bioContainer: {
+    backgroundColor: colors.prussianBlue,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingBottom: '30px',
+    height: '100%',
+    width: '100%',
+  },
+  bioHeader: {
+    padding: 15,
+    color: colors.eggshell,
+    fontSize: 24,
+  },
+  bioSignOff: {
+    color: colors.eggshell,
+    padding: '15px',
+  },
+  bioSummaryHeader: {
+    paddingTop: 15,
+    paddingRight: 15,
+    paddingLeft: 15,
+    paddingBottom: 7,
+    color: colors.eggshell,
+  },
+  bioSummaryItem: {
+    paddingTop: 7,
+    paddingBottom: 7,
+    paddingLeft: 15,
+    paddingRight: 15,
+    color: colors.eggshell,
+    fontSize: 24,
+  },
   buttonGroup: {
     diaplay: 'flex',
     flexWrap: 'wrap',
@@ -21,6 +57,12 @@ export default {
     padding: '10px 20px',
     marginRight: 8
   },
+  calendly: {
+    marginTop: '-30px',
+    marginBottom: '45px',
+    width: '80%',
+    height: '675px',
+  },
   cardMedia: {
     boxShadow: `0px 1px 4px 2px ${colors.oldRose}`,
   },
@@ -29,13 +71,6 @@ export default {
     display: 'flex',
     justifyContent: 'flex-start',
     width: '80%'
-  },
-  mqCenterInContainer: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '30px',
   },
   certArea: {
     backgroundColor: colors.prussianBlue,
@@ -54,19 +89,6 @@ export default {
     borderRadius: 15,
     maxWidth: 345,
   },
-  certs: {
-    backgroundColor: colors.prussianBlue,
-  },
-  certTitleArea: {
-    backgroundColor: colors.wine,
-    height: 100,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  expandIcon: {
-    color: colors.eggshell,
-  },
   header: {
     alignItems: 'center',
     backgroundColor: colors.wine,
@@ -75,6 +97,38 @@ export default {
     fontWeight: 600,
     justifyContent: 'center',
     width: '100%',
+  },
+  headerHomeText: {
+    textDecoration: 'none',
+    color: colors.eggshell,
+    paddingLeft: '5px',
+  },
+  institutionArea: {
+    alignItems: 'center',
+    display: 'flex',
+  },
+  largeViewModal: {
+    alignItems: 'center',
+    display: 'flex',
+    inset: 0,
+    justifyContent: 'center',
+    position: 'fixed',
+    zIndex: 1300,
+    backgroundColor: colors.eggshell,
+    margin: 0,
+  },
+  modalBackdrop: {
+    zIndex: -1,
+    position: 'fixed',
+    inset: 0,
+    backgroundColor: colors.wine,
+  },
+  mqCenterInContainer: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '30px',
   },
   mqHeader: {
     alignItems: 'center',
@@ -85,10 +139,6 @@ export default {
     justifyContent: 'center',
     width: '100%',
     paddingBottom: '30px',
-  },
-  institutionArea: {
-    alignItems: 'center',
-    display: 'flex',
   },
   myInfoContainer: {
     alignItems: 'center',
@@ -119,105 +169,26 @@ export default {
     height: 65,
     margin: 8,
   },
-  pictureNameGroup: {
-    alignItems: 'center',
-    color: colors.eggshell,
-    display: 'flex',
-    justifyContent: 'flex-start',
-  },
-  largeViewModal: {
-    alignItems: 'center',
-    display: 'flex',
-    inset: 0,
-    justifyContent: 'center',
-    position: 'fixed',
-    zIndex: 1300,
-    backgroundColor: colors.eggshell,
-    margin: 0,
-  },
-  modalBackdrop: {
-    zIndex: -1,
-    position: 'fixed',
-    inset: 0,
-    backgroundColor: colors.wine,
-  },
-  modalContent: {
-    position: 'relative',
+  page: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 0,
-    backgroundColor: colors.eggshell,
-    width: '80%',
-    height: '45%',
-  },
-  quoteA: {
-    width: '60%',
-    backgroundColor: colors.oldRose,
-    boxShadow: `0px 0px 4px 2px ${colors.eggshell}`,
-    color: colors.prussianBlue,
-    borderRadius: 15,
-    padding: '15px',
-    margin: '15px 10%',
-    alignSelf: 'flex-start',
-  },
-  quoteB: {
-    width: '60%',
-    backgroundColor: colors.wine,
-    boxShadow: `0px 0px 4px 2px ${colors.oldRose}`,
-    color: colors.eggshell,
-    borderRadius: 15,
-    padding: '15px',
-    margin: '15px 10%',
-    alignSelf: 'flex-end',
-  },
-  quotesContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    alignItems: 'center',
-  },
-  bioHeader: {
-    padding: '15px',
-    color: colors.eggshell,
-  },
-  bioContainer: {
-    backgroundColor: colors.prussianBlue,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    paddingBottom: '30px',
-  },
-  bioExplanation: {
-    color: colors.eggshell,
-    width: '80%',
-    padding: '15px',
-  },
-  bioSignOff: {
-    color: colors.eggshell,
-    padding: '15px',
-  },
-  certPageContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: colors.prussianBlue,
-    color: colors.eggshell,
   },
   pageTitle: {
     padding: '15px',
     color: colors.eggshell,
     fontWeight: 600,
   },
-  headerHomeText: {
-    textDecoration: 'none',
+  pictureNameGroup: {
+    alignItems: 'center',
     color: colors.eggshell,
-    paddingLeft: '5px',
+    display: 'flex',
+    justifyContent: 'flex-start',
   },
-  contactPage: {
-    backgroundColor: colors.prussianBlue,
+  certPageContainer: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'stretch',
+    backgroundColor: colors.prussianBlue,
+    color: colors.eggshell,
   },
   contactContainer: {
     width: '50%',
@@ -234,16 +205,17 @@ export default {
     margin: '10px',
     backgroundColor: colors.eggshell,
   },
+  contactPage: {
+    backgroundColor: colors.prussianBlue,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'stretch',
+  },
   contactSendButton: {
     margin: '10px',
     boxShadow: `0px 1px 8px ${colors.oldRose}`,
     backgroundColor: colors.prussianBlue,
     borderRadius: '9999px',
-  },
-  calendly: {
-    marginTop: '-30px',
-    marginBottom: '45px',
-    width: '80%',
-    height: '675px',
   },
 }
