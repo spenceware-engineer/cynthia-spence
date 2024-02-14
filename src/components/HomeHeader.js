@@ -38,7 +38,7 @@ const HomeHeader = () => {
 
   if (error) {
     console.log(error)
-    return <p>ERROR!</p>
+    return <p>{`ERROR! ${error.message}`}</p>
   }
   if (loading) return <p>LOADING...</p>
 
