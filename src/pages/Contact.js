@@ -1,16 +1,11 @@
 import { useState } from 'react'
 import {
   Box,
-  TextareaAutosize,
-  TextField,
-  Paper,
   Typography
 } from '@mui/material'
 import SharedHeader from '../components/SharedHeader'
-import CustomButton from '../components/CustomButton'
 import { InlineWidget } from 'react-calendly'
 import styles from '../shared/styles'
-import { buttons } from '../shared/buttons'
 import axios from 'axios'
 
 const Contact = () => {

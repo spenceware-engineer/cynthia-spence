@@ -1,7 +1,9 @@
+import { faAward, faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faGitlab, faHackerrank, faLinkedin, faUpwork } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material'
 import CustomButton from './CustomButton'
 import styles from '../shared/styles'
-import { buttons } from '../shared/buttons'
 import { useQuery, gql } from '@apollo/client'
 
 const HOME_HEAD_INFO = gql`
@@ -11,14 +13,26 @@ const HOME_HEAD_INFO = gql`
         id
         attributes {
           name,
-          jobTitle
+          jobTitle,
+          linkedin,
+          github,
+          gitlab,
+          upwork,
+          hackerrank,
+          resume {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
         }
       }
     }
   }
 `
 
-function HomeHeader() {
+const HomeHeader = () => {
   const matches = useMediaQuery('(min-width:1430px)')
   const { data, error, loading } = useQuery(HOME_HEAD_INFO, { variables: { id: "1" } })
 
@@ -27,6 +41,13 @@ function HomeHeader() {
     return <p>ERROR!</p>
   }
   if (loading) return <p>LOADING...</p>
+
+  const downloadResume = () => {
+    const link = document.createElement('a')
+    link.href = 'common_assets/Cynthia_Spence__resume.pdf'
+    link.download = data.myInfo.data.attributes.resume.data.attributes.url
+    link.click()
+  }
 
   return (
     <Box style={styles.header}>
@@ -56,37 +77,65 @@ function HomeHeader() {
               <Grid item xs={4}>
                 <CustomButton
                   style={styles.buttons}
-                  {...buttons.linkedin}
+                  link={data.myInfo.data.attributes.linkedin}
+                  icon={<FontAwesomeIcon icon={faLinkedin} />}
+                  label="LinkedIn"
                 />
               </Grid>
               <Grid item xs={4}>
                 <CustomButton
                   style={styles.buttons}
-                  {...buttons.contact}
+                  link="/contact"
+                  icon={<FontAwesomeIcon icon={faEnvelope} />}
+                  label="Contact"
                 />
               </Grid>
               <Grid item xs={4}>
                 <CustomButton
                   style={styles.buttons}
-                  {...buttons.resume}
+                  label="Resume"
+                  icon={<FontAwesomeIcon icon={faDownload} />}
+                  handleClick={downloadResume}
                 />
               </Grid>
               <Grid item xs={4}>
                 <CustomButton
                   style={styles.buttons}
-                  {...buttons.github}
+                  label="GitHub"
+                  icon={<FontAwesomeIcon icon={faGithub} />}
+                  link={data.myInfo.data.attributes.github}
                 />
               </Grid>
               <Grid item xs={4}>
                 <CustomButton
                   style={styles.buttons}
-                  {...buttons.gitlab}
+                  label="GitLab"
+                  icon={<FontAwesomeIcon icon={faGitlab} />}
+                  link={data.myInfo.data.attributes.gitlab}
                 />
               </Grid>
               <Grid item xs={4}>
                 <CustomButton
                   style={styles.buttons}
-                  {...buttons.certs}
+                  label="UpWork"
+                  icon={<FontAwesomeIcon icon={faUpwork} />}
+                  link={data.myInfo.data.attributes.upwork}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <CustomButton
+                  style={styles.buttons}
+                  label="HackerRank"
+                  icon={<FontAwesomeIcon icon={faHackerrank} />}
+                  link={data.myInfo.data.attributes.hackerrank}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <CustomButton
+                  style={styles.buttons}
+                  link="/awards"
+                  icon={<FontAwesomeIcon icon={faAward} />}
+                  label="Awards"
                 />
               </Grid>
             </Grid>

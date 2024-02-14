@@ -1,5 +1,4 @@
 import { faAward, faDownload, faEnvelope, faPaperPlane, faBars, faHouse } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const downloadResume = () => {
@@ -10,36 +9,6 @@ const downloadResume = () => {
 }
 
 export const buttons = {
-  certs: {
-    link: "/awards",
-    icon: <FontAwesomeIcon icon={faAward} />,
-    label: "Awards"
-  },
-  contact: {
-    link: "/contact",
-    icon: <FontAwesomeIcon icon={faEnvelope} />,
-    label: "Contact"
-  },
-  github: {
-    link: "https://github.com/spenceware-engineer",
-    icon: <FontAwesomeIcon icon={faGithub} />,
-    label: "GitHub"
-  },
-  gitlab: {
-    link: "https://gitlab.com/spenceware-engineer",
-    icon: <FontAwesomeIcon icon={faGitlab} />,
-    label: "GitLab"
-  },
-  linkedin: {
-    link: "https://www.linkedin.com/in/cynthia-spence-68a226194",
-    icon: <FontAwesomeIcon icon={faLinkedin} />,
-    label: "LinkedIn"
-  },
-  resume: {
-    icon: <FontAwesomeIcon icon={faDownload} />,
-    handleClick: downloadResume,
-    label: "Resume"
-  },
   sendButton: {
     icon: <FontAwesomeIcon icon={faPaperPlane} />,
     label: "Send",
