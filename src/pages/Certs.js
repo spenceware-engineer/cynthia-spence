@@ -41,7 +41,7 @@ const CERTS_LIST = gql`
 const Certs = () => {
   const { data, error, loading } = useQuery(CERTS_LIST)
 
-  if (error) return <p>{`ERROR! ${error.message}`}</p>
+  if (error) return <p>{`ERROR! ${error.message} ${process.env.REACT_APP_GRAPHQL_URL}`}</p>
   if (loading) return <p>Loading...</p>
 
   return (

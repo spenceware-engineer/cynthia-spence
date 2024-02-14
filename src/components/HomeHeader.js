@@ -38,7 +38,7 @@ const HomeHeader = () => {
 
   if (error) {
     console.log(error)
-    return <p>{`ERROR! ${error.message}`}</p>
+    return <p>{`ERROR! ${error.message} ${process.env.REACT_APP_GRAPHQL_URL}`}</p>
   }
   if (loading) return <p>LOADING...</p>
 
