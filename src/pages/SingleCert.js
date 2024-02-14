@@ -35,7 +35,7 @@ const SingleCert = () => {
     variables: { id }
   })
 
-  if (error) return <p>{`ERROR! ${error.message} ${process.env.REACT_APP_GRAPHQL_URL}`}</p>
+  if (error) return <p>{`ERROR! ${error.message}`}</p>
   if (loading) return <p>Loading...</p>
 
   console.log(data)

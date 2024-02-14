@@ -24,7 +24,7 @@ const MY_BIO = gql`
 const AboutSection = () => {
   const { data, error, loading } = useQuery(MY_BIO, { variables: { id: '1' } })
 
-  if (error) return <p>{`ERROR! ${error.message} ${process.env.REACT_APP_GRAPHQL_URL}`}</p>
+  if (error) return <p>{`ERROR! ${error.message}`}</p>
   if (loading) return <p>LOADING...</p>
 
   console.log(data)
