@@ -6,7 +6,7 @@ const AboutSection = () => {
     <div style={styles.bioContainer}>
       <div style={styles.bioBody}>
         <Typography variant='body1' style={styles.bioHeader}>
-          Hello! I'm Cyndi, a passionate software engineer with a relentless enthusiasm for learning and coding. With a robust background spanning five years in the industry, I bring a wealth of experience and a genuine love for the craft.
+          <h2 style={{ display: 'inline' }}>Hello! I'm Cyndi,</h2> a passionate software engineer with a relentless enthusiasm for learning and coding. With a robust background spanning five years in the industry, I bring a wealth of experience and a genuine love for the craft.
         </Typography>
         <Typography variant='body1' style={styles.bioHeader}>
           Throughout my career, I've honed my skills and embraced the dynamic world of software engineering. My work is not just a job; it's a journey of continuous growth and exploration. I thrive in environments that foster collaboration, innovation, and a shared passion for coding.
@@ -33,7 +33,7 @@ const AboutSection = () => {
           Thank you for stopping by, and feel free to connect if you share similar interests or if you're on the lookout for a dedicated team member!
         </Typography>
       </div>
-    </div>
+    </div >
   )
 }
 
