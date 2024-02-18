@@ -1,6 +1,42 @@
 import { colors } from './colors'
 
 export default {
+  bioBody: {
+    width: '75%',
+  },
+  bioContainer: {
+    backgroundColor: colors.prussianBlue,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingBottom: '30px',
+    height: '100%',
+    width: '100%',
+  },
+  bioHeader: {
+    padding: 15,
+    color: colors.eggshell,
+    fontSize: 24,
+  },
+  bioSignOff: {
+    color: colors.eggshell,
+    padding: '15px',
+  },
+  bioSummaryHeader: {
+    paddingTop: 15,
+    paddingRight: 15,
+    paddingLeft: 15,
+    paddingBottom: 7,
+    color: colors.eggshell,
+  },
+  bioSummaryItem: {
+    paddingTop: 7,
+    paddingBottom: 7,
+    paddingLeft: 15,
+    paddingRight: 15,
+    color: colors.eggshell,
+    fontSize: 24,
+  },
   buttonGroup: {
     diaplay: 'flex',
     flexWrap: 'wrap',
@@ -175,26 +211,6 @@ export default {
     flexDirection: 'column',
     width: '100%',
     alignItems: 'center',
-  },
-  bioHeader: {
-    padding: '15px',
-    color: colors.eggshell,
-  },
-  bioContainer: {
-    backgroundColor: colors.prussianBlue,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    paddingBottom: '30px',
-  },
-  bioExplanation: {
-    color: colors.eggshell,
-    width: '80%',
-    padding: '15px',
-  },
-  bioSignOff: {
-    color: colors.eggshell,
-    padding: '15px',
   },
   certPageContainer: {
     display: 'flex',
