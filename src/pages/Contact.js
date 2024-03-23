@@ -50,7 +50,7 @@ const Contact = () => {
         <Typography variant="h2" align="center" style={styles.pageTitle}>
           Contact Me!
         </Typography>
-        {/* <Typography variant="h4" align="center" style={styles.pageTitle}>
+        <Typography variant="h4" align="center" style={styles.pageTitle}>
           Let me know if you are interested in hiring me
           or if you have anything to share with me!
         </Typography>
@@ -101,7 +101,7 @@ const Contact = () => {
             {...buttons.sendButton}
             handleClick={onSend}
           />
-        </Paper> */}
+        </Paper>
         <Typography variant="h3" align="center" style={styles.bioSignOff}>
           You can schedule a time to meet with me. I'm happy to chat!
         </Typography>
